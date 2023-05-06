@@ -1,10 +1,12 @@
 import "./App.css";
+import Weather from "./Weather.js";
+
 
 export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Weather App</h1>
+        <Weather />
         <footer>
           This code was created by Shakiba Hadidi and is{" "}
           <a href="https://github.com/shakibahadidi/my-app" target="_blank">
