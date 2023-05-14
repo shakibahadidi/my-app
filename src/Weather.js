@@ -12,7 +12,7 @@ export default function Weather(props) {
       ready: true,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
-      date: new Date( response.data.dt * 1000 ),
+      date: new Date(response.data.dt * 1000 ),
       description: response.data.condition.description,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
 
@@ -25,6 +25,7 @@ export default function Weather(props) {
 function handleSubmit (event){
   event.preventDefault();
   //search for a city
+  search()
 }
 
 function handleCityChange (event){
@@ -32,6 +33,12 @@ function handleCityChange (event){
 setCity(event.target.value);
 }
 
+function search(){
+   const apiKey = "a8c8b76f9ba59324a0e2ad20oe25b3t3";
+   let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+   axios.get(apiURL).then(handleResponse);
+
+}
 
   if (weatherData.ready) {
     return (
@@ -61,10 +68,7 @@ setCity(event.target.value);
       </div>
     );
   } else {
-    const apiKey = "a8c8b76f9ba59324a0e2ad20oe25b3t3";
-    let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-    axios.get(apiURL).then(handleResponse);
-
+   search();
     return "Loading...";
   }
 }
