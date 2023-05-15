@@ -11,7 +11,7 @@ export default function App() {
         <footer>
           This project was coded by{" "}
           <a
-            href="https://www.delac.io/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
