@@ -11,7 +11,7 @@ export default function App() {
         <footer>
           This project was coded by{" "}
           <a
-            href="#"
+            href="https://www.linkedin.com/in/shakiba-hadidi-62439a262/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -26,7 +26,11 @@ export default function App() {
             open-sourced on GitHub
           </a>{" "}
           and{" "}
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://app.netlify.com/teams/shakibahadidi/overview"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             hosted on Netlify
           </a>
         </footer>
